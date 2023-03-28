@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        style="@style/Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <TextView
+        android:id="@+id/birthTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="생연월일"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+    <TextView
+        android:id="@+id/bloodTypeTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="혈액형"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthTextView" />
+
+    <TextView
+        android:id="@+id/phoneNumberTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비상연락처"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bloodTypeTextView" />
+
+    <TextView
+        android:id="@+id/CautionTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주의사항"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberTextView" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/Values"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:text="이성현이성현이성현이성현이성현이성현"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:gravity="end"
+        app:layout_constraintBaseline_toBaselineOf="@id/nameTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"></TextView>
+
+    <TextView
+        android:id="@+id/birth"
+        style="@style/Values"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0000-00-00"
+        android:gravity="end"
+        android:maxLines="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/birthTextView"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/guideline"></TextView>
+
+    <TextView
+        android:id="@+id/bloodType"
+        style="@style/Values"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0형"
+        android:gravity="end"
+        android:maxLines="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bloodTypeTextView"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/guideline"></TextView>
+
+    <TextView
+        android:id="@+id/phoneNumber"
+        style="@style/Values"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="010-0000-0000"
+        android:gravity="end"
+        android:maxLines="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/phoneNumberTextView"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/guideline"></TextView>
+
+    <TextView
+        android:id="@+id/caution"
+        style="@style/Values"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="없음"
+        android:gravity="end"
+        android:maxLines="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/CautionTextView"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/guideline"></TextView>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editFloatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        app:srcCompat="@drawable/baseline_mode_edit_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
